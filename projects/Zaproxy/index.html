@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/main.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Project : Remote Zaproxy panel</title>
+    <style>
+        .ting{height: 480px;}
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+</head>
+    <body class="bg-gray-900 text-white font-body focus:scroll-auto p-8">
+        <h4 class="text-center text-3xl">Remote OWASP ZAP Daemon with Flask Integration</h4>
+
+        <div class="w-auto mt-8 lg:ml-20 lg:mr-20 blockrounded-lg shadow-l transition-all duration-300 dark:bg-transparent dark:border-gray-700 group">
+            <div class="flex flex-row">
+                <div id="default-carousel" class="relative w-full" data-carousel="slide">
+                    <div class="flex flex-wrap w-full p-4">
+                        
+                        <div class="relative w-full md:w-1/2 p-4">  
+                            <div class="relative overflow-hidden rounded-lg ting">
+                                <div class="duration-1000 ease-in-out" data-carousel-item="active">
+                                    <img src="media/1.png" class="block w-full h-full object-contain" alt="Slide 1">
+                                </div>
+                                <div class="duration-1000 ease-in-out hidden" data-carousel-item>
+                                    <img src="media/2.png" class="block w-full h-full object-contain" alt="Slide 2">
+                                </div>
+                                <div class="duration-1000 ease-in-out hidden" data-carousel-item>
+                                    <img src="media/3.png" class="block w-full h-full object-contain" alt="Slide 3">
+                                </div>
+                                <div class="duration-1000 ease-in-out hidden" data-carousel-item>
+                                    <img src="media/4.png" class="block w-full h-full object-contain" alt="Slide 4">
+                                </div>
+                                <div class="duration-1000 ease-in-out hidden" data-carousel-item>
+                                    <img src="media/5.png" class="block w-full h-full object-contain" alt="Slide 5">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="w-full md:w-1/2 flex flex-col justify-between"> 
+                            <div class="ml-8">
+                                <div class="text-justify">
+                                    <h5 class="mb-2 text-base mt-4" style="text-indent: 32px;">
+                                        This project features a custom interface for managing OWASP ZAP (Zed Attack Proxy) as a remote daemon, built with Flask for both frontend and backend operations. Real-time updates during scans are provided using WebSockets, allowing users to monitor scan progress and view live data as vulnerabilities are detected.
+                                    </h5>
+                                    <h5 class="mb-2 text-base mt-4" style="text-indent: 32px;">
+                                        Scan reports are stored in an SQLite database for future reference, and users can generate comprehensive .pdf reports on demand. This tool is designed to enhance the efficiency and accessibility of automated security scans, making it valuable for ongoing vulnerability management.
+                                    </h5>
+                                </div>
+                            </div>                            
+                            <div class="flex flex-col space-y-2 ml-8">
+                                <button type="button" class="text-base p-1 hover:text-secondary-500 outline-none" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0">dashboard view</button>
+                                <button type="button" class="text-base p-1 hover:text-secondary-500 outline-none" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1">scan form</button>
+                                <button type="button" class="text-base p-1 hover:text-secondary-500 outline-none" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2">scan progress</button>
+                                <button type="button" class="text-base p-1 hover:text-secondary-500 outline-none" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3">scan details</button>
+                                <button type="button" class="text-base p-1 hover:text-secondary-500 outline-none" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4">exported scan result</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+        <script>
+            document.querySelectorAll('[data-carousel-slide-to]').forEach(button => {
+                button.addEventListener('click', () => {
+
+                    document.querySelectorAll('[data-carousel-slide-to]').forEach(btn => {
+                        btn.classList.remove('text-secondary-500');
+                        btn.classList.add('text-gray-600');
+                        btn.setAttribute('aria-current', 'false');
+                    });
+                    
+                    button.classList.add('text-secondary-500');
+                    button.classList.remove('text-gray-600');
+                    button.setAttribute('aria-current', 'true');
+                });
+            });
+        </script>
+    </body>
+</html>
