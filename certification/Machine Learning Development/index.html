@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/css/index.css" rel="stylesheet">
+    <script src="/staticthree.min.js"></script>
+</head>
+    <body class="text-white font-body flex h-screen wrapper">
+        <canvas id="star-bg" style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: -1;"></canvas>
+        <div class="flex w-full">
+            <!-- LeftSide -->   
+            <aside class="w-2/5 h-auto">
+                <div class="h-full flex flex-col items-center justify-center">
+                    <img class="rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-[1.175]" src="/static/media/Machine Learning Development.png" alt="Certificate"/>
+                </div>
+            </aside>
+            
+            <!-- RightSide -->
+            <main class="w-3/5 pl-16 no-scrollbar h-auto rounded-lg">
+                <div class="h-full backdrop-blur-[2px] p-4 overflow-y-scroll no-scrollbar text-center flex flex-col items-center justify-center">
+                    <div class="pl-16 tracking-tight text-white group-hover:text-secondary-500 transition-all duration-300">
+                        <!-- Certificate title -->
+                        <div class="font-bold">
+                            <a href="https://www.dicoding.com/certificates/L4PQEGJRQPO1" class="group-hover:underline" target="_blank" rel="noopener noreferrer">
+                                <p class="text-2xl">Machine Learning Development</p>
+                                <p class="text-[18px]" style="margin-top: -4px;" >Dicoding Indonesia</p>
+                            </a>
+                        </div>
+                        <!-- Certificate description -->
+                        <div class="space-y-4 mt-8">
+                            <p class="text-[16px] indent-12 text-justify">
+                                This course focuses on practical deep learning applications using TensorFlow and Keras. It covers Natural Languange Preprocessing, time series forecasting, image classification, and recommendation systems powered by deep learning
+                            </p>
+                            <p class="text-[16px] indent-12 text-justify">
+                                From this course, I learned how to implement weather forecasting models, as well finetuning techniques to improve a deep learning model for image classification.
+                            </p>
+                        </div>
+                        <!-- Certificate status -->
+                        <div class="flex flex-row justify-evenly mt-8">
+                            <p>
+                                Achieved<br>
+                                <b>February 10, 2025</b>
+                            </p>
+                            <button onclick="window.open('https://www.dicoding.com/certificates/L4PQEGJRQPO1', '_blank')" class="transition-transform duration-300 ease-in-out transform hover:scale-[1.175]">
+                                <u>Open Certificate</u>
+                            </button>
+                            <p>
+                                Valid Until<br>
+                                <b>February 10, 2028</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>    
+            </main>
+            
+            <!-- Footer -->
+            <footer class="fixed bottom-0 left-0 p-6 w-full text-white flex justify-between items-center">
+                <div class="hover:cursor-pointer flex items-center transition-transform duration-300 ease-in-out transform hover:scale-[1.20]" onclick="window.history.go(-1)">
+                    <svg class="ml-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                    </svg>
+                    <h4 class="text-base text-center ml-2">Return to main page</h4>
+                </div>
+            </footer>
+        </div>
+        <script src="/static/js/stars.js"></script>
+    </body>
+</html>

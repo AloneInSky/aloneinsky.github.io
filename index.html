@@ -1,0 +1,345 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/css/index.css" rel="stylesheet">
+    <script src="static/js/three.min.js"></script>
+</head>
+    <body class="bg-black text-white font-body flex h-screen wrapper">
+
+        <div id="preloader" class="fixed inset-0 bg-black text-white flex flex-col items-center justify-center z-50 transition-opacity duration-700">
+            <div class="flex flex-col items-center">
+                <h1 class="text-4xl font-bold">Stephen Yosafat</h1>
+                <h1 class="text-2xl">Portofolio</h1>
+            </div>
+            <h1 class="fixed bottom-0 pb-8">This page is best viewed at a resolution of 1920x1080 or higher.</h1>
+        </div>
+
+        <div id="main-content" class="opacity-0 transition-opacity duration-700 flex gap-x-0">
+
+            <canvas id="star-bg" style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: -1;"></canvas>
+
+            <!-- LeftSide -->   
+            <aside class="w-2/5 h-full pt-20 pb-20">
+                <div class="flex flex-col justify-between h-full">
+                    <!-- Name -->
+                    <div>
+                        <p class="font-bold text-[40px]">Stephen Yosafat</p>
+                        <p class="font-bold text-[30px]" style="margin-top: -8px;">Backend Engineer</p>
+                        <p class="text-[18px] mt-4 text-gray-400">Building your perfect solutions<br> for your problems.</p>
+                    </div>
+                    <!-- Navigation -->
+                    <div class="">
+                        <nav class="space-y-4">
+                            <div class="cursor-pointer" onclick="window.location.href='#about';">
+                                <p id="link-about" class="scroll-link block text-xl font-semibold hover:text-secondary-500">ABOUT</p>
+                            </div>
+                            <div class="cursor-pointer" onclick="window.location.href='#experience';">
+                                <p id="link-experience" class="scroll-link block text-xl font-semibold hover:text-secondary-500">EXPERIENCE</p>
+                            </div>
+                            <div class="cursor-pointer" onclick="window.location.href='#projects';">
+                                <p id="link-projects" class="scroll-link block text-xl font-semibold hover:text-secondary-500">PROJECTS</p>
+                            </div>
+                            <div class="cursor-pointer" onclick="window.location.href='#certification';">
+                                <p id="link-certification" class="scroll-link block text-xl font-semibold hover:text-secondary-500">CERTIFICATIONS</p>
+                            </div>
+                            <div class="cursor-pointer" onclick="window.location.href='#contact';">
+                                <p id="link-contact" class="scroll-link block text-xl font-semibold hover:text-secondary-500">CONTACT ME</p>
+                            </div>
+                        </nav>
+                    </div>
+                    <!-- Social Media buttons -->
+                    <div class="flex space-x-4">
+                        <div class="hover:text-secondary-500 cursor-pointer" onclick="window.open('https://www.linkedin.com/in/steph-y', '_blank')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                            </svg>    
+                        </div>
+                        <div class="hover:text-secondary-500 cursor-pointer" onclick="window.open('https://wa.me/628225757577792', '_blank')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                            </svg>    
+                        </div>
+                        <div class="hover:text-secondary-500 cursor-pointer" onclick="window.open('https://github.com/AloneInSky', '_blank')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                            </svg>
+                        </div>
+                        <div class="hover:text-secondary-500 cursor-pointer" onclick="window.open('mailto:stephenyosafat.id@gmail.com', '_blank')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+                                <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+                                <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648m-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- RightSide -->
+            <main class="w-3/5 pl-8 pr-8  no-scrollbar">
+                <div class="h-full overflow-y-scroll snap-y snap-mandatory scroll-smooth  no-scrollbar">
+                    <!-- Aboutme Section -->
+                    <section class="snap-start min-h-screen flex items-center justify-center" id="about">
+                        <div class="ml-10 mr-10 backdrop-blur-[2px] rounded-lg p-4">
+                            <p class="text-[20px] indent-14 text-justify">
+                                Since being introduced to Python in 2021, I've gained valuable experience and mentored university students on their projects.
+                            </p>
+                            <p class="mt-6 text-[20px] indent-14 text-justify">
+                                I'm currently focused on advancing my skills in Machine Learning, Large Language Models, and Kotlin, while remaining open to new opportunities that broaden my experience.
+                            </p>
+                            <p class="mt-6 text-[20px] indent-14 text-justify">
+                                For me, building smooth, high-performing applications brings the greatest personal satisfaction. 
+                                Additionally, discovering new things along the way also keeps me motivated.
+                            </p>
+                            <p class="mt-6 text-[20px] indent-14 text-justify">
+                                Last but not least, I'm eager to take on real-world projects related to Artificial Intelligence. 
+                                Opens for collaborate with researchers and scientists working on AI-driven innovations.
+                            </p>
+                        </div>
+                    </section>
+                    <!-- Experience Section -->
+                    <section class="snap-start min-h-screen flex items-center justify-center" id="experience">
+                        <div class="ml-10 mr-10">
+                            <!-- Card -->
+                            <div class="relative block p-4 border border-gray-700 rounded-lg hover:bg-white/5 backdrop-blur-[2px] hover:backdrop-blur-lg transition-all duration-500 bg-transparent hover:border-transparent group">
+                                <div class="absolute top-2 right-2 transform translate-x-0 translate-y-0 group-hover:translate-x-6 group-hover:-translate-y-6 bg-secondary-500 text-gray-700 p-2 rounded-lg shadow-md transition-transform duration-500">
+                                    <p class="text-sm ml-2 mr-2 group-hover:text-base group-hover:text-primary-100 duration-500">Nov 2023 - Present</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <div class="ml-2 mr-2">
+                                        <h5 class="mb-2 text-[22px] font-bold tracking-tigh text-white group-hover:text-secondary-500 transition-all duration-300">
+                                            Freelance Programmer
+                                        </h5>
+                                        <p class="text-[18px] indent-14 text-justify text-gray-400 group-hover:text-primary-100">
+                                            As a freelancer, I have built a variety of projects including APIs, websites integrating machine learning models, Telegram bots, and utilizing third-party service APIs.
+                                            My experience ranges from creating simple web apps to developing functional tools and integrations for clients' specific needs.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>  
+                    </section>
+                    <!-- Projects Section -->
+                    <section class="snap-start min-h-screen flex items-center justify-center" id="projects">
+                        <div class="w-full px-10">
+                            <!-- Card -->
+                            <div onclick="window.location.href='v1/'" class="hover:cursor-pointer w-full relative block mb-6 p-4 border border-gray-700 rounded-lg hover:bg-white/5 backdrop-blur-[2px] hover:backdrop-blur-lg transition-all duration-500 bg-transparent hover:border-transparent group">
+                                <div class="absolute bottom-2 right-2 bg-secondary-500 text-gray-700 p-2 rounded-lg shadow-md transition-transform duration-500 group-hover:translate-x-6 group-hover:translate-y-6">
+                                    <p class="text-sm ml-2 mr-2 hover:cursor-pointer group-hover:text-primary-100 hidden group-hover:block duration-500">View Project →</p>
+                                </div>
+                                <div class="flex flex-row">
+                                <div class="ml-2 mr-2">
+                                    <h5 class="mb-2 text-xl font-bold tracking-tight text-white group-hover:text-secondary-500 transition-all duration-300">
+                                        My First Portofolio
+                                    </h5>
+                                    <p class="text-[18px] indent-14 text-justify text-gray-400 group-hover:text-primary-100">
+                                        This project contains my previous design for my Portofolio showcasing my skills, creativity, and growth over time.
+                                </div>
+                                </div>
+                            </div>
+
+                            <!-- Card -->
+                            <div onclick="window.location.href='project/End-to-End ML Deployment Pipeline'" class="hover:cursor-pointer w-full relative block mb-6 p-4 border border-gray-700 rounded-lg hover:bg-white/5 backdrop-blur-[2px] hover:backdrop-blur-lg transition-all duration-500 bg-transparent hover:border-transparent group">
+                                <div class="absolute bottom-2 right-2 bg-secondary-500 text-gray-700 p-2 rounded-lg shadow-md transition-transform duration-500 group-hover:translate-x-6 group-hover:translate-y-6">
+                                    <p class="text-sm ml-2 mr-2 hover:cursor-pointer group-hover:text-primary-100 hidden group-hover:block duration-500">View Project →</p>
+                                </div>
+                                <div class="flex flex-row">
+                                <div class="ml-2 mr-2">
+                                    <h5 class="mb-2 text-xl font-bold tracking-tight text-white group-hover:text-secondary-500 transition-all duration-300">
+                                        End-to-End ML Deployment Pipeline
+                                    </h5>
+                                    <p class="text-[18px] indent-14 text-justify text-gray-400 group-hover:text-primary-100">
+                                        This project implements a simple end-to-end machine learning pipeline using Python and TFX components, ensuring reproducibility and scalability for production ML workflows.
+                                    </p>
+                                </div>
+                                </div>
+                            </div>
+
+                            <!-- Card -->
+                            <div onclick="window.location.href='project/Zaproxy'" class="hover:cursor-pointer w-full relative block mb-6 p-4 border border-gray-700 rounded-lg hover:bg-white/5 backdrop-blur-[2px] hover:backdrop-blur-lg transition-all duration-500 bg-transparent hover:border-transparent group">
+                                <div class="absolute bottom-2 right-2 bg-secondary-500 text-gray-700 p-2 rounded-lg shadow-md transition-transform duration-500 group-hover:translate-x-6 group-hover:translate-y-6">
+                                    <p class="text-sm ml-2 mr-2 hover:cursor-pointer group-hover:text-primary-100 hidden group-hover:block duration-500">View Project →</p>
+                                </div>
+                                <div class="flex flex-row">
+                                <div class="ml-2 mr-2">
+                                    <h5 class="mb-2 text-xl font-bold tracking-tight text-white group-hover:text-secondary-500 transition-all duration-300">
+                                        OWASP ZAP (Zed Attack Proxy) Panel
+                                    </h5>
+                                    <p class="text-[18px] indent-14 text-justify text-gray-400 group-hover:text-primary-100">
+                                        This project features a custom interface for managing OWASP ZAP (Zed Attack Proxy) as a remote daemon, built with Flask for both frontend and backend operations.
+                                    </p>
+                                </div>
+                                </div>
+                            </div>
+                        </div>                    
+                    </section>
+                    <!-- Cerctifications Section -->
+                    <section class="snap-start  min-h-screen flex items-center justify-center" id="certification">
+                        <div class="w-full px-10">
+                            <!-- Card -->
+                            <div onclick="window.location.href='certification/Machine Learning Operations'" class="hover:cursor-pointer w-full relative block mb-6 p-4 border border-gray-200 rounded-lg shadow-lg hover:bg-white/5 backdrop-blur-[2px] hover:backdrop-blur-lg transition-all duration-500 bg-white dark:bg-transparent dark:border-gray-700 hover:border-transparent dark:hover:bg-white/5 group">
+                                <div class="absolute bottom-2 right-2 bg-secondary-500 text-gray-700 p-2 rounded-lg shadow-md transition-transform duration-500 group-hover:translate-x-6 group-hover:translate-y-4">
+                                    <p class="text-sm ml-2 mr-2 hover:cursor-pointer group-hover:underline group-hover:text-primary-100 hidden group-hover:block duration-500">View Certificate →</p>
+                                </div>
+                                <div class="flex flex-row gap-4">
+                                    <div class="flex items-center">
+                                        <img class="max-w-[128px] rounded-t-lg" src="/static/media/Machine Learning Operations.png" alt="" />
+                                    </div>
+                                    <div class="flex flex-row">
+                                        <div class="ml-2 mr-2">
+                                            <div class="mb-2 text-xl font-bold tracking-tight dark:text-white group-hover:text-secondary-500 transition-all duration-300">
+                                                <a href="https://www.dicoding.com/certificates/53XEKE4OKXRN" class="group-hover:underline" target="_blank" rel="noopener noreferrer">
+                                                    <p>Machine Learning Operations (MLOps)</p>
+                                                    <p class="text-[18px]" style="margin-top: -6px;" >Dicoding Indonesia</p>
+                                                </a>
+                                            </div>
+                                            <p class="text-[18px] text-justify text-gray-400 group-hover:text-primary-100">
+                                                Achieved : July 2025<br>
+                                                Valid until : July 2028<br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card -->
+                            <div onclick="window.location.href='certification/Machine Learning Application'" class="hover:cursor-pointer w-full relative block mb-6 p-4 border border-gray-200 rounded-lg shadow-lg hover:bg-white/5 backdrop-blur-[2px] hover:backdrop-blur-lg transition-all duration-500 bg-white dark:bg-transparent dark:border-gray-700 hover:border-transparent dark:hover:bg-white/5 group">
+                                <div class="absolute bottom-2 right-2 bg-secondary-500 text-gray-700 p-2 rounded-lg shadow-md transition-transform duration-500 group-hover:translate-x-6 group-hover:translate-y-4">
+                                    <p class="text-sm ml-2 mr-2 hover:cursor-pointer group-hover:underline group-hover:text-primary-100 hidden group-hover:block duration-500">View Certificate →</p>
+                                </div>
+                                <div class="flex flex-row gap-4">
+                                    <div class="flex items-center">
+                                        <img class="max-w-[128px] rounded-t-lg" src="/static/media/Machine Learning Application.png" alt="" />
+                                    </div>
+                                    <div class="flex flex-row">
+                                        <div class="ml-2 mr-2">
+                                            <div class="mb-2 text-xl font-bold tracking-tight dark:text-white group-hover:text-secondary-500 transition-all duration-300">
+                                                <a href="https://www.dicoding.com/certificates/98XWENOWWXM3" class="group-hover:underline" target="_blank" rel="noopener noreferrer">
+                                                    <p>Machine Learning Application</p>
+                                                    <p class="text-[18px]" style="margin-top: -6px;" >Dicoding Indonesia</p>
+                                                </a>
+                                            </div>
+                                            <p class="text-[18px] text-justify text-gray-400 group-hover:text-primary-100">
+                                                Achieved : May 2025<br>
+                                                Valid until: May 2028<br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card -->
+                            <div onclick="window.location.href='certification/Machine Learning Development'" class="hover:cursor-pointer relative block mb-6 p-4 border border-gray-200 rounded-lg shadow-lg hover:bg-white/5 backdrop-blur-[2px] hover:backdrop-blur-lg transition-all duration-500 bg-white dark:bg-transparent dark:border-gray-700 hover:border-transparent dark:hover:bg-white/5 group">
+                                <div class="absolute bottom-2 right-2 bg-secondary-500 text-gray-700 p-2 rounded-lg shadow-md transition-transform duration-500 group-hover:translate-x-6 group-hover:translate-y-4">
+                                    <p class="text-sm ml-2 mr-2 hover:cursor-pointer group-hover:underline group-hover:text-primary-100 hidden group-hover:block duration-500">View Certificate →</p>
+                                </div>
+                                <div class="flex flex-row gap-4">
+                                    <div class="flex items-center">
+                                        <img class="max-w-[128px] rounded-t-lg" src="/static/media/Machine Learning Development.png" alt="" />
+                                    </div>
+                                    <div class="flex flex-row">
+                                        <div class="ml-2 mr-2">
+                                            <div class="mb-2 text-xl font-bold tracking-tight text-white group-hover:text-secondary-500 transition-all duration-300">
+                                                <a href="https://www.dicoding.com/certificates/L4PQEGJRQPO1" class="group-hover:underline" target="_blank" rel="noopener noreferrer">
+                                                    <p>Machine Learning Development</p>
+                                                    <p class="text-[18px]" style="margin-top: -6px;" >Dicoding Indonesia</p>
+                                                </a>
+                                            </div>
+                                            <p class="text-[18px] text-justify text-gray-400 group-hover:text-primary-100">
+                                                Achieved : February 2025<br>
+                                                Valid until: February 2028<br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </section>
+
+                    <section class="snap-start min-h-screen flex items-center justify-center backdrop-blur-[2px] p-8" id="contact">
+                        <div class="w-full p-4 h-full">
+                            <div class="mx-auto text-2xl">
+                                <p class="text-center mb-2">
+                                    Interested in Working Together?
+                                </p>
+                                <p class="text-sm text-gray-400 text-center mb-4">
+                                    Just fill out the form below, your message will be sent directly to my WhatsApp or email. I'll get back to you as soon as possible!
+                                </p>
+                                <div class="relative z-0 w-full mb-8 group">
+                                    <input type="text" name="name" id="name" class="block py-4 w-full text-lg bg-transparent border-0 border-b-2 appearance-none text-white border-gray-600 focus:border-secondary-500 focus:outline-none focus:ring-0 peer" placeholder=" " required />
+                                    <label for="name" class="peer-focus:font-medium absolute text-lg text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-secondary-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                                        Name
+                                    </label>
+                                </div>
+                                <div class="relative z-0 w-full mb-8 group">
+                                    <input type="text" name="subject" id="subject" class="block py-4 w-full text-lg bg-transparent border-0 border-b-2 appearance-none text-white border-gray-600 focus:border-secondary-500 focus:outline-none focus:ring-0 peer" placeholder=" " required />
+                                    <label for="subject" class="peer-focus:font-medium absolute text-lg text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-secondary-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                                        Subject
+                                    </label>
+                                </div>
+                                <div class="relative z-0 w-full mb-8 group">
+                                    <textarea type="text" rows="3" name="message" id="message" class="block py-4 w-full text-lg bg-transparent border-0 border-b-2 appearance-none text-white border-gray-600 focus:border-secondary-500 focus:outline-none focus:ring-0 peer" placeholder=" " required></textarea>
+                                    <label for="message" class="peer-focus:font-medium absolute text-lg text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-secondary-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                                        Message
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="flex justify-center">
+                                <!-- Send button -->
+                                <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="text-white focus:ring-4 focus:outline-none rounded-lg px-4 py-2 inline-flex items-center bg-secondary-500" type="button">
+                                    <span class="mr-4 text-sm">Send</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                                        <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z"/>
+                                    </svg>
+                                </button>
+                                
+                                <!-- Dropdown menu -->
+                                <div id="dropdownHover" class="z-10 hidden divide-y divide-gray-100 rounded-lg shadow-lg w-56 bg-white/5">
+                                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
+                                        <li>
+                                            <button onclick="SendWhatsapp()" class="w-full text-left px-4 py-3 hover:bg-gray-600 flex items-center gap-3">
+                                                <svg xmlns="http://www.w3.org/2000/svg"  width="24" height="24" class="text-green-500" fill="currentColor" viewBox="0 0 16 16">
+                                                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                                                </svg>
+                                                <span>Via WhatsApp</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button onclick="Sendmail()" class="w-full text-left px-4 py-3 hover:bg-gray-600 flex items-center gap-3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+                                                    <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+                                                    <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648m-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+                                                </svg> 
+                                                <span>Via Email</span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>                    
+                    </section>
+
+                    <!--
+                        <footer class="snap-start text-white text-center py-4 mt-10 lg:mt-20">
+                            <!-- https://tailwindcss.com/ -->
+                            <p class="text-sm">Build with Tailwind CSS.</p>
+                            <!-- https://github.com/ -->
+                            <p class="text-sm">Deployed with Github.</p>
+                            <!-- https://fonts.google.com/specimen/IBM+Plex+Mono -->
+                            <p class="text-sm">Using IBM Plex Mono Fonts.</p>
+                        </footer>
+                    -->
+                </div>    
+            </main>
+        </div>
+
+    <script src="static/js/index.js"></script>
+    <script src="static/js/stars.js"></script>
+    <script src="static/js/flowbite.min.js"></script>
+    </body>
+</html>

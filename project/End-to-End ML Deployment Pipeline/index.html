@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/css/index.css" rel="stylesheet">
+    <title>End-to-End ML Deployment Pipeline</title>
+    <script src="/static/js/three.min.js"></script>
+</head>
+    <body class="text-white font-body flex h-screen wrapper">
+        <canvas id="star-bg" style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: -1;"></canvas>
+        <div class="flex w-full">
+            <!-- LeftSide -->   
+            <aside class="w-1/2 h-auto overflow-hidden flex flex-col items-center justify-center">
+                <div class="w-full h-full relative" data-carousel="slide">
+                    <div class="flex items-center justify-center w-full h-full duration-700 ease-in-out" data-carousel-item>
+                        <img src="media/flowchart.png" class="max-h-full max-w-full object-contain rounded-xl" alt="System Flowchart">
+                    </div>
+                    <div class="flex items-center justify-center w-full h-full duration-700 ease-in-out" data-carousel-item>
+                        <img src="media/gRPC_requests.png" class="max-h-full max-w-full object-contain rounded-xl" alt="gRPC Request Examples">
+                    </div>
+                    <div class="flex items-center justify-center w-full h-full duration-700 ease-in-out" data-carousel-item>
+                        <img src="media/containers.png" class="max-h-full max-w-full object-contain rounded-xl" alt="SaaS Containers">
+                    </div>
+                    <div class="flex items-center justify-center w-full h-full duration-700 ease-in-out" data-carousel-item>
+                        <img src="media/deployment_logs.png" class="max-h-full max-w-full object-contain rounded-xl" alt="Container Deployment Logs">
+                    </div>
+                    <div class="flex items-center justify-center w-full h-full duration-700 ease-in-out" data-carousel-item>
+                        <img src="media/grafana_dashboard.png" class="max-h-full max-w-full object-contain rounded-xl" alt="Metrics visualisation using Grafana">
+                    </div>
+                </div>
+            </aside>
+            <!-- RightSide -->
+            <main class="w-1/2 pl-8 no-scrollbar h-auto rounded-lg">
+                <div class="h-full backdrop-blur-[2px] p-4 overflow-y-scroll no-scrollbar text-center flex flex-col items-center justify-center">
+                    <div class="tracking-tight text-white group-hover:text-secondary-500 transition-all duration-300">
+                        <!-- Certificate title -->
+                        <div class="font-bold">
+                            <p class="text-2xl">End-to-End ML Deployment Pipeline</p>
+                        </div>
+                        <!-- Certificate description -->
+                        <div class="space-y-4 mt-8">
+                            <p class="text-[16px] indent-12 text-justify">
+                                This course provided hands-on experience in building and operating industry-ready machine learning systems. It covered the complete MLOps workflow using TensorFlow Extended (TFX) and emphasized writing clean, maintainable Python code following industry standards. 
+                            </p>
+                            <p class="text-[16px] indent-12 text-justify">
+                                Through this project, I designed and implemented a full TFX pipeline deployed on a SaaS platform. The system is fully documented, containerized for scalable development, and includes monitoring and logging via Prometheus, with real-time metrics visualized in Grafana demonstrates my ability to build robust, production-ready ML solutions suitable for SaaS environments. 
+                            </p>
+                        </div>
+                    </div>
+                </div>    
+            </main>
+            
+            <!-- Footer -->
+            <footer class="fixed bottom-0 left-0 p-6 w-full text-white flex justify-between items-center">
+                <div class="hover:cursor-pointer flex items-center transition-transform duration-300 ease-in-out transform hover:scale-[1.20]" onclick="window.history.go(-1)">
+                    <svg class="ml-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                    </svg>
+                    <h4 class="text-base text-center ml-2">Return to main page</h4>
+                </div>
+            </footer>
+        </div>
+        <script src="/static/js/stars.js"></script>
+        <script src="/static/js/flowbite.min.js"></script>
+    </body>
+</html>
